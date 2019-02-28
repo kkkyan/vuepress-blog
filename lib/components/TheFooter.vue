@@ -1,20 +1,5 @@
 <template>
   <footer class="footer">
-    <p class="sns-links">
-      <a
-        v-for="(item, name) in sns"
-        :key="name"
-        class="sns-link"
-        :href="item.link"
-        target="_blank"
-      >
-        <IconSns
-          :name="name"
-          :account="item.account"
-        />
-      </a>
-    </p>
-
     <p>
       <span>Powered by </span>
 
@@ -29,19 +14,19 @@
 </template>
 
 <script>
-import IconSns from './IconSns.vue'
+// import IconSns from './IconSns.vue'
 
 export default {
   name: 'TheFooter',
 
   components: {
-    IconSns,
+    // IconSns,
   },
 
   computed: {
-    sns () {
-      return this.$site.themeConfig.personalInfo.sns || {}
-    },
+    // sns () {
+    //   return this.$site.themeConfig.personalInfo.sns || {}
+    // },
   },
 }
 </script>
