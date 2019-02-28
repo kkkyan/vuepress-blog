@@ -84,8 +84,6 @@ export default {
 
 .posts-list-item
   padding 0 0.5rem
-  &:not(:first-child)
-    border-top 1px solid $borderColor
   .post-title
     color $textColor
     transition all 0.2s

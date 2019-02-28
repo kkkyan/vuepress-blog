@@ -9,6 +9,7 @@
       v-for="post in listPosts"
       :key="post.path"
       :post="post"
+      class="main-div"
     />
   </TransitionFadeSlide>
 </template>
