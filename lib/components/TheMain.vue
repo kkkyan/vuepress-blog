@@ -6,7 +6,14 @@
       :key="showAside"
     >
       <aside class="aside">
-        <InfoCard class="main-div" />
+        <InfoCard
+          v-if="$page.type !== 'post'"
+          class="main-div"
+        />
+        <InfoCardMini
+          class="main-div"
+          v-else
+        />
 
         <PostNavCard
           v-if="$page.type === 'post'"
@@ -30,6 +37,7 @@
 import TransitionFadeSlide from './TransitionFadeSlide.vue'
 import PostNavCard from './PostNavCard.vue'
 import InfoCard from './InfoCard.vue'
+import InfoCardMini from './InfoCardMini.vue'
 import Home from './layouts/Home.vue'
 import Posts from './layouts/Posts.vue'
 import Post from './layouts/Post.vue'
@@ -45,6 +53,7 @@ export default {
   components: {
     TransitionFadeSlide,
     InfoCard,
+    InfoCardMini,
     PostNavCard,
     /* eslint-disable vue/no-unused-components */
     Home,

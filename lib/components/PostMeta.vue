@@ -1,18 +1,5 @@
 <template>
   <section class="post-meta main-div">
-    <section class="post-date clearfix">
-      <span class="create-date">
-        {{ `${$themeConfig.lang.createdAt} : ${$page.createdAt}` }}
-      </span>
-
-      <span
-        v-if="$page.updatedAt"
-        class="update-date"
-      >
-        {{ `${$themeConfig.lang.updatedAt} : ${$page.updatedAt}` }}
-      </span>
-    </section>
-
     <section class="post-links">
       <RouterLink
         v-if="prevPost"

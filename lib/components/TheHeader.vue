@@ -11,6 +11,22 @@
           <h1>
             {{ $page.frontmatter.title || $page.title || $site.title || '' }}
           </h1>
+
+          <section
+            class="post-date clearfix"
+            v-if="$page.type === 'post'"
+          >
+            <span class="create-date">
+              {{ `${$themeConfig.lang.createdAt} : ${$page.createdAt}` }}
+            </span>
+
+            <span
+              v-if="$page.updatedAt"
+              class="update-date"
+            >
+              {{ `${$themeConfig.lang.updatedAt} : ${$page.updatedAt}` }}
+            </span>
+          </section>
         </slot>
       </TheHeaderBanner>
     </TransitionFadeSlide>
